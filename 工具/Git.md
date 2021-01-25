@@ -2,6 +2,15 @@
 
 ## Git命令
 
+### Git拉取代码
+
+```shell
+# 拉取master分支
+$ git clone master分支git地址
+# 拉取对应分支代码
+$ git clone -b 分支全名 master分支git地址
+```
+
 ### GitHub创建新分支
 
 ```shell
@@ -19,11 +28,21 @@ $ git branch
 ### 切换当前分支
 
 ```shell
-$ git checkout main
+$ git checkout main/dayStudy
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 ```
+
+### Git提交代码
+
+```shell
+# 
+```
+
+
+
+
 
 
 
