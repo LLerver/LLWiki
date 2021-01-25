@@ -117,7 +117,9 @@ Changes not staged for commit:
 no changes added to commit (use "git add" and/or "git commit -a")
 
 # 果然有修改但是没有提交的代码,怎么办呢.要么直接提交相关文件到远程仓库,要么进行stash操作,先进行提交操作吧
-
+$ git add -A
+$ git commit -m "测试rebase的提交"
+$ git push
 
 ```
 
