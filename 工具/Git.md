@@ -37,7 +37,53 @@ Your branch is up to date with 'origin/main'.
 ### Git提交代码
 
 ```shell
-# 
+# 先查询文件状态,红色的基本都是新增的为主
+uang:LLWiki maguagua$ git status
+On branch dayStudy
+Your branch is up to date with 'origin/dayStudy'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   "\345\267\245\345\205\267/Git.md"
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	"java/\346\241\206\346\236\266/kafka.md"
+	"java/\346\241\206\346\236\266/redis\344\270\262\350\256\262.md"
+	"java/\346\241\206\346\236\266/spring\345\220\257\345\212\250IOC\350\277\207\347\250\213.md"
+	"java/\346\241\206\346\236\266/\344\270\200.Docker\346\246\202\350\277\260.md"
+	"java/\346\241\206\346\236\266/\346\225\260\346\215\256\345\272\223\350\260\203\344\274\230\344\270\262\350\256\262.md"
+	
+# 将需要提交的文件提交到本地仓库缓存中
+$ git add .
+
+# 写提交备注
+$ git commit -m "文件提交"
+
+# push到远程仓库
+huang:LLWiki maguagua$ git commit -m "同步mac文件"
+[dayStudy 8667053] 同步mac文件
+ 6 files changed, 1916 insertions(+), 1 deletion(-)
+ create mode 100644 "java/\346\241\206\346\236\266/kafka.md"
+ create mode 100644 "java/\346\241\206\346\236\266/redis\344\270\262\350\256\262.md"
+ create mode 100644 "java/\346\241\206\346\236\266/spring\345\220\257\345\212\250IOC\350\277\207\347\250\213.md"
+ create mode 100644 "java/\346\241\206\346\236\266/\344\270\200.Docker\346\246\202\350\277\260.md"
+ create mode 100644 "java/\346\241\206\346\236\266/\346\225\260\346\215\256\345\272\223\350\260\203\344\274\230\344\270\262\350\256\262.md"
+huang:LLWiki maguagua$ git push
+Username for 'https://github.com': liangliewei1@163.com
+Password for 'https://liangliewei1@163.com@github.com':
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (11/11), 36.19 KiB | 5.17 MiB/s, done.
+Total 11 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/LLerver/LLWiki.git
+   b619847..8667053  dayStudy -> dayStudy
 ```
 
 
