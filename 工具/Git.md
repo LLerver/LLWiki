@@ -86,7 +86,42 @@ To https://github.com/LLerver/LLWiki.git
    b619847..8667053  dayStudy -> dayStudy
 ```
 
+Git分支代码合并
 
+```shell
+# A,B两个分支,想将A分支的代码合并到B分支上.先将当前分支切换到B分支上,然后进行git rebase A即可
+# 现在将dayStudy分支的文件,合并到master分支上
+$ git checkout dayStudy
+
+# 检查是否当前所在分支
+huang:LLWiki maguagua$ git branch
+* dayStudy
+  main
+# 进行rebase操作
+
+huang:LLWiki maguagua$ git rebase main
+error: cannot rebase: You have unstaged changes.
+error: Please commit or stash them.
+
+# 嘤嘤嘤 报错了?检查一下本地是否有修改但未提交的代码哟
+huang:LLWiki maguagua$ git status
+On branch dayStudy
+Your branch is up to date with 'origin/dayStudy'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   "\345\267\245\345\205\267/Git.md"
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+# 果然有修改但是没有提交的代码,怎么办呢.要么直接提交相关文件到远程仓库,要么进行stash操作,先进行提交操作吧
+
+
+```
+
+### Git缓存区stash操作
 
 
 
