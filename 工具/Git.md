@@ -121,7 +121,6 @@ $ git add -A
 $ git commit -m "测试rebase的提交"
 $ git push
 
-<<<<<<< HEAD
 # 终于合并成功了
 huang:LLWiki maguagua$ git rebase main
 First, rewinding head to replay your work on top of it...
@@ -138,8 +137,6 @@ Please commit your changes or stash them before you switch branches.
 Aborting
 
 # 本地还是有修改的文件,所以还是需要先进行提交,才能进行切换分支操作
-=======
->>>>>>> dayStudy
 ```
 
 ### Git缓存区stash操作
