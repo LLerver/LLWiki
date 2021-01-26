@@ -137,6 +137,17 @@ Please commit your changes or stash them before you switch branches.
 Aborting
 
 # 本地还是有修改的文件,所以还是需要先进行提交,才能进行切换分支操作
+# 一顿add commit push操作
+huang:LLWiki maguagua$ git push
+To https://github.com/LLerver/LLWiki.git
+ ! [rejected]        dayStudy -> dayStudy (non-fast-forward)
+error: failed to push some refs to 'https://github.com/LLerver/LLWiki.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+# 哦豁~又报错了.妙啊.就是说远程仓库与本地仓库不一致,需要先进行
 ```
 
 ### Git缓存区stash操作
@@ -174,7 +185,7 @@ yarn build
 # windows gitbash
 node dist/bin/gitcracken.js patcher --asar ~/AppData/Local/gitkraken/app-7.5.0/resources/app.asar
 # mac 
-node dist/bin/gitcracken.js patcher --asar 你的gitkraken的目录/resources/app.asar
+node dist/bin/gitcracken.js patcher --asar /Applications/GitKraken.app/Contents/Resources/app.asar
 ```
 
 参考：
@@ -194,3 +205,54 @@ node安装的错误信息
 ![image-20210125165844310](d:\user\01404091\Application Data\Typora\typora-user-images\image-20210125165844310.png)
 
 卸载重新安装
+
+
+
+
+
+### Mac安装yarn
+
+```shell
+sudo -s
+# 输入密码
+npm i -g yarn
+
+npm WARN engine yarn@1.22.10: wanted: {"node":">=4.0.0"} (current: {"node":"v0.10.29","npm":"1.4.14"})
+ 
+> yarn@1.22.10 preinstall /usr/local/lib/node_modules/yarn
+> :; (node ./preinstall.js > /dev/null 2>&1 || true)
+
+/usr/local/bin/yarn -> /usr/local/lib/node_modules/yarn/bin/yarn.js
+/usr/local/bin/yarnpkg -> /usr/local/lib/node_modules/yarn/bin/yarn.js
+yarn@1.22.10 /usr/local/lib/node_modules/yarn
+# 安装成功
+```
+
+
+
+### Mac升级node.js和npm
+
+```shell
+# 第一步，先查看本机node.js版本：
+node -v
+
+# 第二步，清除node.js的cache：
+sudo npm cache clean -f
+
+# 第三步，安装 n 工具，这个工具是专门用来管理node.js版本的，别怀疑这个工具的名字，是他是他就是他，他的名字就是 "n"
+sudo npm install -g n
+
+# 第四步，安装最新版本的node.js
+sudo n stable
+
+# 第五步，再次查看本机的node.js版本：
+node -v
+
+# 第六步，更新npm到最新版：
+$ sudo npm install npm@latest -g
+
+# 第七步，验证
+node -v
+npm -v
+```
+
