@@ -2,8 +2,6 @@
 
 ## Git命令
 
-<<<<<<< HEAD
-=======
 ### Git拉取代码
 
 ```shell
@@ -13,7 +11,6 @@ $ git clone master分支git地址
 $ git clone -b 分支全名 master分支git地址
 ```
 
->>>>>>> dayStudy
 ### GitHub创建新分支
 
 ```shell
@@ -31,18 +28,12 @@ $ git branch
 ### 切换当前分支
 
 ```shell
-<<<<<<< HEAD
-$ git checkout main
-=======
 $ git checkout main/dayStudy
->>>>>>> dayStudy
 Switched to branch 'main'
 Your branch is up to date with 'origin/main'.
 
 ```
 
-<<<<<<< HEAD
-=======
 ### Git提交代码
 
 ```shell
@@ -130,13 +121,28 @@ $ git add -A
 $ git commit -m "测试rebase的提交"
 $ git push
 
+# 终于合并成功了
+huang:LLWiki maguagua$ git rebase main
+First, rewinding head to replay your work on top of it...
+Applying: 同步mac文件
+Applying: 二次同步mac端文件内容
+Applying: 测试rebase的提交操作
+Applying: tmp提交
+
+# 这就完事了?这只是将dayStudy的代码合并到master分支上了,但是这都是本地操作,远程仓库的代码并没有变化,所以需要将本地的master分支代码push到远程仓库中
+$ git checkout main
+error: Your local changes to the following files would be overwritten by checkout:
+	工具/Git.md
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+# 本地还是有修改的文件,所以还是需要先进行提交,才能进行切换分支操作
 ```
 
 ### Git缓存区stash操作
 
 
 
->>>>>>> dayStudy
 
 
 ## GitKraken

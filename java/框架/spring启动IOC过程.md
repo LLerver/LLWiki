@@ -1089,9 +1089,3 @@ protected Object initializeBean(final String beanName, final Object bean, @Nulla
 14.执行最后的finishRefresh();方法,该方法基本就是一些后续的清场工作了.
 
 完结!撒花!撒花!撒花!
-
-
-
-
-
-总结一下话术吧.
